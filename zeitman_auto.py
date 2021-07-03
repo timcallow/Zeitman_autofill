@@ -82,6 +82,7 @@ frame = driver.find_element_by_name("Hauptfenster")
 driver.switch_to.frame(frame)
 
 
+# adds some random noise for realism
 def random_time(hour, minute, noise):
 
     # add in the random noise
@@ -90,7 +91,7 @@ def random_time(hour, minute, noise):
     if minute + randtime >= 60:
         hour = hour + 1
         minute = (minute + randtime) % 60
-    elif minute + randtime <= 0:
+    elif minute + randtime < 0:
         hour = hour - 1
         minute = (minute + randtime) % 60
     else:
