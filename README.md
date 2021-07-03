@@ -10,3 +10,6 @@ Script autofills working hours based on some average start and end times plus so
 Weekends and holidays are ignored, but currently all working hours are set to "present". No teleworking option yet.
 
 Warning: it will only work if your Zeitman language is set to English. And even then I make no promises.
+
+# Contributions
+Anyone is more than welcome to make it better
