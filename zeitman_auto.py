@@ -22,7 +22,8 @@ from selenium.webdriver.support.ui import Select
 
 # user defined parameters
 
-month = 7  # month by number
+month = 1  # month by number
+year = 2022
 
 # time data
 
@@ -64,7 +65,7 @@ submit = driver.find_element_by_id("button")
 submit.click()
 
 # go to chosen month
-monthstr = "jahrmonat(2021," + str(month) + ', "E")'
+monthstr = "jahrmonat(" + str(year) + "," + str(month) + ', "E")'
 timesheets = driver.find_elements_by_class_name("statustd")
 
 # search until chosen month is found
@@ -82,7 +83,6 @@ frame = driver.find_element_by_name("Hauptfenster")
 driver.switch_to.frame(frame)
 
 
-# adds some random noise for realism
 def random_time(hour, minute, noise):
 
     # add in the random noise
@@ -91,7 +91,7 @@ def random_time(hour, minute, noise):
     if minute + randtime >= 60:
         hour = hour + 1
         minute = (minute + randtime) % 60
-    elif minute + randtime < 0:
+    elif minute + randtime <= 0:
         hour = hour - 1
         minute = (minute + randtime) % 60
     else:
