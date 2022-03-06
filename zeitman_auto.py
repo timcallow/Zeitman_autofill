@@ -5,7 +5,6 @@
 Automatically fill out zeitweb form
 """
 
-import sys
 import getpass
 import random
 import time
@@ -15,8 +14,9 @@ from selenium.common.exceptions import (
     NoSuchElementException,
 )
 from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import Select
+from webdriver_manager.chrome import ChromeDriverManager
+
 
 ###################################################
 
@@ -52,7 +52,7 @@ usr = input("Username: ")
 pswd = getpass.getpass("Password: ")
 
 # launch zeitweb
-driver = webdriver.Chrome()
+driver = webdriver.Chrome(ChromeDriverManager().install())
 driver.get("https://zeitweb.hzdr.de/scripts_zeitm/login.php?sso=2")
 
 # login
