@@ -1,8 +1,10 @@
 # Zeitman_autofill
 Filling out Zeitman is boring. This script might make some of the pain go away.
 
-# Requirements
-The `selenium` package and Chrome webdriver must be installed to use this script.
+# Installation
+The required packages can be installed with `pip install -r requirements.txt`.
+
+The script has been tested with Python 3.9.
 
 # Usage
 Script autofills working hours based on some average start and end times plus some user-defined random noise.
