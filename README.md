@@ -1,4 +1,4 @@
-# Zeitman_autofill
+# Autofill Zeitman
 Filling out Zeitman is boring. This script might make some of the pain go away.
 
 # Installation
